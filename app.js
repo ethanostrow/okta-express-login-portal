@@ -6,6 +6,7 @@ const session = require("express-session");
 
 const auth = require("./auth");
 const middleware = require("./middleware");
+const publicRouter = require("./routes/public");
 const usersRouter = require("./routes/users");
 
 
@@ -31,6 +32,7 @@ app.use(auth.oidc.router);
 app.use(middleware.addUser);
 
 // Routes
+app.use("/", publicRouter);
 app.use("/users", usersRouter);
 
 // Error handlers
