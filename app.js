@@ -5,6 +5,7 @@ const path = require("path");
 const session = require("express-session");
 
 const auth = require("./auth");
+const middleware = require("./middleware");
 const usersRouter = require("./routes/users");
 
 
@@ -27,7 +28,7 @@ app.use(session({
 }));
 
 app.use(auth.oidc.router);
-app.use(auth.addUser);
+app.use(middleware.addUser);
 
 // Routes
 app.use("/users", usersRouter);
