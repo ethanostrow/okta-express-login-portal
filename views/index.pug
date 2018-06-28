@@ -1,0 +1,14 @@
+extends layout
+
+block variables
+  - var title = "Home"
+
+block content
+  h2.text-center Expresso
+
+  .row
+    .offset-sm-2.col-sm-8
+      .jumbotron.text-center.
+        Welcome to your new Expresso app! Please visit the
+        #[a(href="https://github.com/rdegges/expresso", title="Expresso") GitHub page]
+        to learn more about Expresso.
