@@ -19,7 +19,7 @@ function addUser(req, res, next) {
 
 
 // Only let the user access the route if they are authenticated.
-function ensureAuthenticated(req, res, next) {
+function loginRequired(req, res, next) {
   if (!req.user) {
     return res.status(401).render("unauthenticated");
   }
@@ -28,4 +28,4 @@ function ensureAuthenticated(req, res, next) {
 }
 
 
-module.exports = { addUser, ensureAuthenticated };
+module.exports = { addUser, loginRequired };
