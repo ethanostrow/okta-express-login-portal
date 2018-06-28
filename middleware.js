@@ -16,3 +16,16 @@ function addUser(req, res, next) => {
       next(err);
     });
 };
+
+
+// Only let the user access the route if they are authenticated.
+function ensureAuthenticated(req, res, next) {
+  if (!req.user) {
+    return res.status(401).render("unauthenticated");
+  }
+
+  next();
+}
+
+
+export { addUser, ensureAuthenticated };
