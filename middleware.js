@@ -28,4 +28,4 @@ function ensureAuthenticated(req, res, next) {
 }
 
 
-export { addUser, ensureAuthenticated };
+module.exports = { addUser, ensureAuthenticated };
