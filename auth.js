@@ -27,4 +27,4 @@ const oidc = new ExpressOIDC({
 });
 
 
-module.exports = { addUser, oidc, oktaClient };
+module.exports = { oidc, oktaClient };
