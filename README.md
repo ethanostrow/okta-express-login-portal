@@ -1,3 +1,10 @@
+# Ethan's instructions
+1. clone this to your computer
+2. ``npm install``
+3. make a new file in the folder called .envrc
+4. put the code ethan has in it
+5. ``. .envrc``
+6. ``npm start``
 # okta-express-login-portal
 
 A simple Node.js website that showcases how to handle user login and
